@@ -1,3 +1,4 @@
+import path from 'path'
 import {
   defineDocumentType,
   makeSource,
@@ -34,7 +35,7 @@ export default makeSource({
       ],
       esbuildOptions: (options) => {
         options.platform = 'node'
-        options.outdir = `./public`
+        options.outdir = path.join(process.cwd(), 'public'),
         options.assetNames = `images/[dir]/[name]`
         options.loader = {
           ...options.loader,
