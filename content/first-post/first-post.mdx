@@ -14,9 +14,9 @@ rendered markdown, regardless of where this bundle is in the file system.
 The image above is in the same folder, next to this file. The process to accomplish this is
 as follows:
 
-1. When the `mdx` file is sourced, the file path is provided to the `mdx-bundler` config. `content/first-post/first-post.mdx`
+1. When the `mdx` file is sourced, the file path is provided to the `mdx-bundler` config: `content/first-post/first-post.mdx`
 2. The directory is parsed from the file path, and set as the `cwd` for `mdx-bundler`. `content/first-post`
-3. The path to `kitten.png` which needs to be bundled, is now understood to be `content/first-post/kitten.jpg`
-4. `kitten.png` is copied to the Next.js public folder by `mdx-bundler`.
+3. The path to `kitten.jpg` which needs to be bundled, is now understood to be `content/first-post/kitten.jpg`
+4. `kitten.jpg` is copied to the Next.js public folder by `mdx-bundler`.
 5. Finally, thanks to `mdx-bundler` the URL in the compiled `first-post` body is updated to the bundled, public path, `public/images/first-post/kitten.jpg`.
 
