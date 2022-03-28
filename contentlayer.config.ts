@@ -27,8 +27,11 @@ export default makeSource({
   documentTypes: [PostMDX, PostMD],
   // Assuming a Markdown bundler works similar to mdx-bundler, the config behavior would be similar for both
   // md: (context) => {
+  // This function would be invoked for each path encountered by the bundler
   mdx: (context) => {
+    // It returns a configuration object suitable for mdx-bundler
     return {
+      // It would need to provide the filePath for the file encountered, and maybe other info
       cwd: path.dirname(context.filePath),
       remarkPlugins: [
         remarkMdxImages,
