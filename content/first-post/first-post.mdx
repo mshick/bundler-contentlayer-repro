@@ -4,7 +4,10 @@ title: First Blog Post!
 
 This is a blog post that leverages the `mdx-bundler` `cwd` and the image bundling approach 
 suggested [here](https://github.com/kentcdodds/mdx-bundler#image-bundling) to create an easy 
-to grok source for this Next.js site.
+to grok source for this Next.js site. You can co-locate file-based assets with your `mdx` files
+creating "bundles" of source material. A bonus feature here as well is that the local, 
+relative path is also understood by github, so you get image previews in the GitHub 
+rendered markdown, regardless of where this bundle is in the file system.
 
 ![A kitten](./kitten.jpg)
 
@@ -16,3 +19,4 @@ as follows:
 3. The path to `kitten.png` which needs to be bundled, is now understood to be `content/first-post/kitten.jpg`
 4. `kitten.png` is copied to the Next.js public folder by `mdx-bundler`.
 5. Finally, thanks to `mdx-bundler` the URL in the compiled `first-post` body is updated to the bundled, public path, `public/images/first-post/kitten.jpg`.
+
